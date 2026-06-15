@@ -1,0 +1,215 @@
+/* ISACC2 Live Overlay — matrix theme */
+
+#icp-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999;
+  width: 280px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  background: #0a0a0a;
+  color: #00cc44;
+  border: 1px solid #00cc44;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0, 204, 68, 0.25);
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.icp-header {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  background: #000;
+  border-bottom: 1px solid #00cc44;
+  user-select: none;
+}
+
+.icp-title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 12px;
+  color: #00ff55;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.icp-status {
+  font-size: 11px;
+  color: #006622;
+  font-style: italic;
+}
+
+.icp-toggle {
+  background: none;
+  border: none;
+  color: #00cc44;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 1;
+  padding: 0 2px;
+  font-family: inherit;
+}
+.icp-toggle:hover { color: #00ff55; }
+
+/* ── Body ── */
+.icp-body {
+  padding: 10px 10px 8px;
+}
+
+/* ── Stat boxes ── */
+.icp-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.icp-stat {
+  flex: 1;
+  background: #000;
+  border: 1px solid #004d1a;
+  border-radius: 2px;
+  padding: 5px 7px;
+  text-align: center;
+}
+
+.icp-stat.icp-next {
+  border-color: #00cc44;
+  background: #001a0a;
+}
+
+.icp-stat label {
+  display: block;
+  font-size: 9px;
+  color: #006622;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.icp-stat strong {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #00cc44;
+}
+
+.icp-stat.icp-next strong {
+  color: #00ff55;
+}
+
+/* ── Divider ── */
+.icp-divider {
+  border-top: 1px solid #003311;
+  margin: 8px 0;
+}
+
+/* ── Latest block ── */
+.icp-latest-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #006622;
+  margin-bottom: 4px;
+}
+
+.icp-latest-meta {
+  font-size: 12px;
+  color: #009933;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icp-user {
+  font-weight: bold;
+  color: #00ff55;
+}
+
+.icp-sep {
+  margin: 0 4px;
+  color: #004d1a;
+}
+
+.icp-link {
+  color: #00cc44;
+  text-decoration: none;
+}
+.icp-link:hover {
+  color: #00ff55;
+  text-decoration: underline;
+}
+
+.icp-subforum {
+  font-size: 11px;
+  color: #005522;
+  margin-bottom: 5px;
+}
+
+.icp-quote {
+  font-size: 11px;
+  color: #009933;
+  font-style: italic;
+  line-height: 1.4;
+  max-height: 54px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 6px;
+  border-left: 2px solid #004d1a;
+  padding-left: 7px;
+}
+
+.icp-jump {
+  display: inline-block;
+  font-size: 11px;
+  color: #00cc44;
+  text-decoration: none;
+}
+.icp-jump:hover {
+  color: #00ff55;
+  text-decoration: underline;
+}
+
+/* ── Site stats row ── */
+.icp-stats-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #006622;
+  margin-bottom: 4px;
+}
+
+.icp-online {
+  color: #00ff55;
+}
+
+/* ── Footer ── */
+.icp-footer {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #003311;
+  text-align: right;
+}
+
+.icp-refresh {
+  background: none;
+  border: none;
+  color: #00cc44;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+.icp-refresh:hover { color: #00ff55; }
+.icp-refresh:disabled { opacity: 0.3; cursor: default; }
+
+/* ── Error ── */
+.icp-error {
+  font-size: 12px;
+  color: #ff4444;
+}
