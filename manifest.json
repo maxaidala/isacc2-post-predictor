@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ISACC2 Post Predictor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Predicts next post/comment numbers and milestone ETAs on isacc2.com forums.",
 
   "permissions": [
