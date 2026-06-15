@@ -163,9 +163,13 @@
       refreshBtn.textContent = "…";
       refreshBtn.disabled = true;
       await run();
-      refreshBtn.textContent = "✓ Done";
-      setTimeout(() => { refreshBtn.textContent = "↻ Refresh"; }, 1000);
-      refreshBtn.disabled = false;
+      // Look up the button fresh in case the overlay was rebuilt
+      const btn = document.querySelector("#icp-overlay .icp-refresh");
+      if (btn) {
+        btn.textContent = "✓ Done";
+        btn.disabled = false;
+        setTimeout(() => { btn.textContent = "↻ Refresh"; }, 1000);
+      }
     });
   }
 
