@@ -137,39 +137,18 @@
     statsRow.appendChild(text("span", "icp-online icp-stat-online", stats.online_users + " online"));
     body.appendChild(statsRow);
 
-    // ── Footer ──
-    const footer = el("div", "icp-footer");
-    const refreshBtn = el("button", "icp-refresh");
-    refreshBtn.textContent = "↻ Refresh";
-    footer.appendChild(refreshBtn);
-    body.appendChild(footer);
-
     root.appendChild(body);
     return root;
   }
 
-  function attachEvents(el) {
-    const toggleBtn  = el.querySelector(".icp-toggle");
-    const body       = el.querySelector(".icp-body");
-    const refreshBtn = el.querySelector(".icp-refresh");
+  function attachEvents(overlay) {
+    const toggleBtn = overlay.querySelector(".icp-toggle");
+    const body      = overlay.querySelector(".icp-body");
 
     toggleBtn.addEventListener("click", () => {
       const collapsed = body.style.display === "none";
       body.style.display = collapsed ? "" : "none";
       toggleBtn.textContent = collapsed ? "−" : "+";
-    });
-
-    refreshBtn.addEventListener("click", async () => {
-      refreshBtn.textContent = "…";
-      refreshBtn.disabled = true;
-      await run();
-      // Look up the button fresh in case the overlay was rebuilt
-      const btn = document.querySelector("#icp-overlay .icp-refresh");
-      if (btn) {
-        btn.textContent = "✓ Done";
-        btn.disabled = false;
-        setTimeout(() => { btn.textContent = "↻ Refresh"; }, 1000);
-      }
     });
   }
 
@@ -283,6 +262,6 @@
 
   showLoading();
   await run();
-  setInterval(() => { if (document.getElementById("icp-overlay")) run(); }, 10_000);
+  setInterval(() => { if (document.getElementById("icp-overlay")) run(); }, 500);
 
 })();

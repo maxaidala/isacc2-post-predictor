@@ -187,27 +187,6 @@
   color: #00ff55;
 }
 
-/* ── Footer ── */
-.icp-footer {
-  margin-top: 8px;
-  padding-top: 6px;
-  border-top: 1px solid #003311;
-  text-align: right;
-}
-
-.icp-refresh {
-  background: none;
-  border: none;
-  color: #00cc44;
-  cursor: pointer;
-  font-size: 11px;
-  font-family: inherit;
-  padding: 0;
-  text-decoration: underline;
-}
-.icp-refresh:hover { color: #00ff55; }
-.icp-refresh:disabled { opacity: 0.3; cursor: default; }
-
 /* ── Error ── */
 .icp-error {
   font-size: 12px;
