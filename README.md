@@ -12,7 +12,7 @@ A small overlay appears in the bottom-right corner of any ISACC2 forum page. It 
 - Who made the most recent comment, what thread it was in, a preview of what they said, and a link to jump straight to it
 - How many posts, comments, and users the forum has in total, and how many people are online right now
 
-The overlay updates automatically every 10 seconds. Click `+` to expand it and `−` to collapse it.
+The overlay updates automatically every 500ms. Click `+` to expand it and `−` to collapse it.
 
 ---
 
